@@ -4,7 +4,7 @@ This is a repo for sharing how I manage automated tasks as part of the series [H
 
 ## Installation
 
-Copy the '.tasks' directory to your home directory:
+Copy the [.tasks](https://github.com/A5hleyRich/simple-automated-tasks/tree/master/.tasks) directory to your home directory:
 
 ```
 .tasks
@@ -31,7 +31,7 @@ site3.com
 
 Ensure the bash scripts have execute permissions `chmod +x backups.sh cron.sh permissions.sh sites.sh`.
 
-Add each site to the 'sites.sh' config file:
+Add each site to the [sites.sh](https://github.com/A5hleyRich/simple-automated-tasks/blob/master/.tasks/sites.sh) config file:
 
 ```
 SITES=(
