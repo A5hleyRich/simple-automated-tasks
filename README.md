@@ -1,4 +1,4 @@
-# Basic Automated Tasks
+# Simple Automated Tasks
 
 This is a repo for sharing how I manage automated tasks as part of the series [Hosting WordPress Yourself](https://deliciousbrains.com/hosting-wordpress-setup-secure-virtual-server/).
 
@@ -7,22 +7,22 @@ This is a repo for sharing how I manage automated tasks as part of the series [H
 Copy the '.tasks' directory to your home directory:
 
 ```
-+ .tasks
+.tasks
      - backups.php
      - cron.php
      - permissions.php
      - sites.php
-+ site1.com
+site1.com
      + backups
      + cache
      + logs
      + public
-+ site2.com
+site2.com
      + backups
      + cache
      + logs
      + public
-+ site3.com
+site3.com
      + backups
      + cache
      + logs
@@ -39,7 +39,7 @@ $sites = array(
 );
 ```
 
-Add a cronjob for each individual task `crontab -e`, the following example will run WordPress cron every 5 minutes, perform backups dailiy at 5AM and update file permissions dailiy at 6AM:
+Add a cronjob for each individual task `crontab -e`. The following example will run WordPress cron every 5 minutes, perform backups dailiy at 5AM and update file permissions dailiy at 6AM:
 
 ```
 */5 * * * * php -q /home/ashley/.tasks/cron.php >/dev/null 2>&1 
