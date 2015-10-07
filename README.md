@@ -31,7 +31,7 @@ site3.com
 
 Ensure the bash scripts have execute permissions `chmod +x backups.sh cron.sh permissions.sh sites.sh`.
 
-Add each site to the 'sites.php' config file:
+Add each site to the 'sites.sh' config file:
 
 ```
 SITES=(
