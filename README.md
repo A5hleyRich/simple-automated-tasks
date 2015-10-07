@@ -39,7 +39,7 @@ $sites = array(
 );
 ```
 
-Add a cronjob for each individual task `crontab -e`. The following example will run WordPress cron every 5 minutes, perform backups dailiy at 5AM and update file permissions dailiy at 6AM:
+Add a cronjob for each individual task `crontab -e`. The following example will run WordPress cron every 5 minutes, perform backups daily at 5AM and update file permissions daily at 6AM:
 
 ```
 */5 * * * * php -q /home/ashley/.tasks/cron.php >/dev/null 2>&1 
