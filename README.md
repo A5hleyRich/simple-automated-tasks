@@ -41,13 +41,19 @@ SITES=(
 )
 ```
 
-Add a cronjob for each individual task `crontab -e`. The following example will run WordPress cron every 5 minutes, perform backups daily at 5AM, update file permissions daily at 6AM and verify checksums at 9AM:
+Add a cronjob for each individual task `crontab -e`. The following example will run WordPress cron every 5 minutes, perform backups daily at 5AM, update file permissions daily at 6AM and verify checksums at 7AM:
 
 ```
 */5 * * * * bash /home/ashley/.tasks/cron.sh >/dev/null 2>&1 
 0 5 * * * bash /home/ashley/.tasks/backups.sh >/dev/null 2>&1
 0 6 * * * bash /home/ashley/.tasks/permissions.sh >/dev/null 2>&1
-0 9 * * * bash /home/ashley/.tasks/checksums.sh >/dev/null 2>&1
+0 7 * * * bash /home/ashley/.tasks/checksums.sh >/dev/null 2>&1
 ```
 
 If you plan on sending backups to S3 you must also [install and configure](https://deliciousbrains.com/backup-wordpress-amazon-glacier/#installing-aws) the AWS CLI tools.
+
+The checksums task requires a [Pushbullet](https://www.pushbullet.com) account, so that notifications are pushed to your computer, IOS or Android devices. Add your _Access Token_ to the [checksums.sh](https://github.com/A5hleyRich/simple-automated-tasks/blob/master/.tasks/checksums.sh) file:
+
+```
+TOKEN=mytoken
+```
