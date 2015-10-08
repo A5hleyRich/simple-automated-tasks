@@ -31,7 +31,7 @@ site3.com
 
 Ensure the bash scripts have execute permissions `chmod +x backups.sh checksums.sh cron.sh permissions.sh sites.sh`.
 
-Add each site to the [sites.sh](https://github.com/A5hleyRich/simple-automated-tasks/blob/master/.tasks/sites.sh) config file:
+Add each site to the [sites.sh](https://github.com/A5hleyRich/simple-automated-tasks/blob/master/.tasks/sites.sh#L7) config file:
 
 ```
 SITES=(
@@ -52,7 +52,7 @@ Add a cronjob for each individual task `crontab -e`. The following example will 
 
 If you plan on sending backups to S3 you must also [install and configure](https://deliciousbrains.com/backup-wordpress-amazon-glacier/#installing-aws) the AWS CLI tools.
 
-The checksums task requires a [Pushbullet](https://www.pushbullet.com) account, so that notifications are pushed to your computer, IOS or Android devices. Add your _Access Token_ to the [checksums.sh](https://github.com/A5hleyRich/simple-automated-tasks/blob/master/.tasks/checksums.sh) file:
+The checksums task requires a [Pushbullet](https://www.pushbullet.com) account, so that notifications are pushed to your computer, IOS or Android devices. Add your _Access Token_ to the [checksums.sh](https://github.com/A5hleyRich/simple-automated-tasks/blob/master/.tasks/checksums.sh#L7) file:
 
 ```
 TOKEN=mytoken
