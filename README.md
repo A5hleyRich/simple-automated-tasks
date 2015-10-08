@@ -29,7 +29,7 @@ site3.com
      + public
 ```
 
-Ensure the bash scripts have execute permissions `chmod +x backups.sh cron.sh permissions.sh sites.sh`.
+Ensure the bash scripts have execute permissions `chmod +x backups.sh checksums.sh cron.sh permissions.sh sites.sh`.
 
 Add each site to the [sites.sh](https://github.com/A5hleyRich/simple-automated-tasks/blob/master/.tasks/sites.sh) config file:
 
