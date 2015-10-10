@@ -20,6 +20,6 @@ do
 	# Remove old backups
 	find ../backups -mtime +30 | xargs rm -fR
 	# Send to S3
-	aws s3 cp "../backups/$DATABASE_FILE.gz" "s3://$SITE/backups/" --storage-class REDUCED_REDUNDANCY
-	aws s3 cp "../backups/$UPLOADS_FILE" "s3://$SITE/backups/" --storage-class REDUCED_REDUNDANCY
+	aws s3 cp "../backups/$DATABASE_FILE.gz" "s3://$i/backups/" --storage-class REDUCED_REDUNDANCY
+	aws s3 cp "../backups/$UPLOADS_FILE" "s3://$i/backups/" --storage-class REDUCED_REDUNDANCY
 done
