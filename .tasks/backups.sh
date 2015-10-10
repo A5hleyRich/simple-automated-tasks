@@ -4,7 +4,7 @@
 source sites.sh
 
 # Filenames
-NOW=$(date +%Y%m%d%H%M%S)
+NOW=$(date +%Y-%m-%d-%H%M%S)
 DATABASE_FILE="${NOW}-database.sql";
 UPLOADS_FILE="${NOW}-uploads.tar.gz";
 
