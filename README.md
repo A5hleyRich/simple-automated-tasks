@@ -44,10 +44,10 @@ SITES=(
 Add a cronjob for each individual task `crontab -e`. The following example will run WordPress cron every 5 minutes, perform backups daily at 5AM, update file permissions daily at 6AM and verify checksums at 7AM:
 
 ```
-*/5 * * * * bash /home/ashley/.tasks/cron.sh >/dev/null 2>&1 
-0 5 * * * bash /home/ashley/.tasks/backups.sh >/dev/null 2>&1
-0 6 * * * bash /home/ashley/.tasks/permissions.sh >/dev/null 2>&1
-0 7 * * * bash /home/ashley/.tasks/checksums.sh >/dev/null 2>&1
+*/5 * * * * cd /home/a5hley/.tasks; bash cron.sh >/dev/null 2>&1
+0 5 * * * cd /home/a5hley/.tasks; bash backups.sh >/dev/null 2>&1
+0 6 * * * cd /home/a5hley/.tasks; bash permissions.sh >/dev/null 2>&1
+0 7 * * * cd /home/a5hley/.tasks; bash checksums.sh >/dev/null 2>&1
 ```
 
 If you plan on sending backups to S3 you must also [install and configure](https://deliciousbrains.com/backup-wordpress-amazon-glacier/#installing-aws) the AWS CLI tools.
