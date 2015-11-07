@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Include config
-source sites.sh
+source /home/a5hley/.tasks/sites.sh
 
 # Filenames
 NOW=$(date +%Y-%m-%d-%H%M%S)
