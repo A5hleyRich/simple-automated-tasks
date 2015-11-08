@@ -13,7 +13,7 @@ for i in ${SITES[@]}
 do
 	cd "$ROOT/$i/public"
 	# Verify checksums
-	if ! wp core verify-checksums; then
+	if ! /usr/local/bin/wp core verify-checksums; then
 		ERRORS="$ERRORS $i"
 	fi
 done
