@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Include config
-source /home/a5hley/.tasks/sites.sh
+source /scripts/simple-automated-tasks/.tasks/sites.sh
 
 # Pushbullet token
 TOKEN=''

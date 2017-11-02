@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Directory where individual site directories reside
-ROOT=/home/a5hley
+ROOT=/var/www/
 
 # Taks to be performed on the following sites
 SITES=(
