@@ -11,9 +11,9 @@ ERRORS=""
 
 for i in ${SITES[@]}
 do
-	cd "$ROOT/$i/public"
+	cd "$ROOT/$i"
 	# Verify checksums
-	if ! /usr/local/bin/wp core verify-checksums; then
+	if ! /usr/local/bin/wp core verify-checksums --allow-root; then
 		ERRORS="$ERRORS $i"
 	fi
 done

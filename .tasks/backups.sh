@@ -15,17 +15,17 @@ do
 
 	cd "$ROOT/$i"
 	# Backup database
-	/usr/local/bin/wp db export "../backups/$DATABASE_FILE" --add-drop-table
+	/usr/local/bin/wp db export "../backups/$DATABASE_FILE" --add-drop-table --allow-root
 	# Compress database file
 	gzip -f "../backups/$DATABASE_FILE"
 	# Backup all files directory
-	tar -zcf "../backups/$FIILES_FILE" ./
+	tar -zcf "../backups/$FILES_FILE" ./
 	# Remove old backups
 	find ../backups -mtime +30 | xargs rm -fR
 	# Send to S3
 	# /usr/local/bin/aws s3 cp "../backups/$DATABASE_FILE.gz" "s3://$i/backups/" --storage-class REDUCED_REDUNDANCY
 	# /usr/local/bin/aws s3 cp "../backups/$UPLOADS_FILE" "s3://$i/backups/" --storage-class REDUCED_REDUNDANCY
   # Send to Google Drive
-	# gdrive upload -p 0ByACnvoLyNYDRURlVGJkcnByc0U welthaus.staging.agentur.auftrieb.at.tar.gz
+	gdrive upload ../backups/ -r
 
 done
