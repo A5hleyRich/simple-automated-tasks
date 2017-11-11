@@ -11,4 +11,5 @@ do
 	# Update plugins
 	/usr/local/bin/wp plugin update --all --allow-root
 	# Update languages
+	/usr/local/bin/wp core language update --allow-root
 done
