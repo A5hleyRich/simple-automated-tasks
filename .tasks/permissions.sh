@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Include config
-source /home/a5hley/.tasks/sites.sh
+source /scripts/simple-automated-tasks/.tasks/sites.sh
 
 for i in ${SITES[@]}
 do
-	cd "$ROOT/$i/public"
+	cd "$ROOT/$i"
 	# Files
 	find . -type f -exec chmod 644 {} +
 	# Directories
